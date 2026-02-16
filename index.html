@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,600;9..144,800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0c0a09;
+            --text: #fafaf9;
+            --text-secondary: #d6d3d1;
+            --text-dim: #78716c;
+            --indigo: #6366f1;
+            --indigo-light: #818cf8;
+            --border: rgba(63,59,56,0.7);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            max-width: 640px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+        .logo em {
+            font-style: normal;
+            background: linear-gradient(135deg, #6366f1, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+        .blog-card {
+            background: rgba(41,37,36,0.6);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: left;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.35s;
+        }
+        .blog-card:hover {
+            border-color: rgba(99,102,241,0.4);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 30px rgba(99,102,241,0.1);
+            transform: translateY(-4px);
+        }
+        .blog-card .tag {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--indigo);
+            margin-bottom: 0.75rem;
+        }
+        .blog-card h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.6rem;
+        }
+        .blog-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+        .blog-card .meta {
+            margin-top: 1rem;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">The <em>Blog</em></div>
+        <p class="subtitle">Thoughts on AI, engineering, and the future of software.</p>
+
+        <a href="blog/humans-steer-agents-execute.html" class="blog-card">
+            <div class="tag">Engineering Paradigm Shift</div>
+            <h2>Humans Steer, Agents Execute</h2>
+            <p>OpenAI built a real product with zero human-written code. This is the end of software engineering as we know it.</p>
+            <div class="meta">2026 &middot; 8 min read</div>
+        </a>
+    </div>
+</body>
+</html>
