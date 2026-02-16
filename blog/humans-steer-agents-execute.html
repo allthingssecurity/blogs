@@ -755,14 +755,56 @@ body.ws-open .fd-toggle { right: calc(1.5rem + 370px); }
 }
 @media (max-width: 768px) {
     .hero h1 { font-size: 2rem; }
+    .hero-content { padding: 5rem 1.25rem 3rem; }
+    .hero-left { padding: 1.25rem 1.25rem 1.4rem; }
     .hero-meta { flex-direction: column; gap: 0.5rem; }
+    .hero-character-wrap { width: 200px; height: 200px; }
+    .hero-character { width: 180px; height: 180px; background-size: 1440px 540px; }
+    .hero-character-glow { width: 200px; height: 200px; }
+    .hero-character.stand { animation: sprite-stand-m 1.9s steps(8) infinite; }
+    .hero-character.book { animation: sprite-book-m 1.35s steps(8) infinite; }
+    .hero-character.read { animation: sprite-read-m 2.2s steps(8) infinite; }
+    @keyframes sprite-stand-m { from { background-position: 0 0; } to { background-position: -1440px 0; } }
+    @keyframes sprite-book-m { from { background-position: 0 -180px; } to { background-position: -1440px -180px; } }
+    @keyframes sprite-read-m { from { background-position: 0 -360px; } to { background-position: -1440px -360px; } }
     .section-wrap { padding: 3.5rem 1.25rem; }
     .stat-strip { grid-template-columns: 1fr 1fr; }
+    .stat-strip-val { font-size: 1.3rem; }
+    .stat-strip-item { padding: 1rem 0.75rem; }
+    .vs-card { padding: 1.25rem; }
+    .bento-card { padding: 1.15rem; }
+    .pullquote { padding: 2rem 1rem; }
     .guide-avatar { width: 60px; height: 60px; }
     .guide-sprite { width: 60px; height: 60px; background-size: 480px 180px; }
+    .guide-sprite.stand { animation: guide-stand-m 1.9s steps(8) infinite; }
+    .guide-sprite.book { animation: guide-book-m 1.35s steps(8) infinite; }
+    .guide-sprite.read { animation: guide-read-m 2.2s steps(8) infinite; }
+    @keyframes guide-stand-m { from { background-position: 0 0; } to { background-position: -480px 0; } }
+    @keyframes guide-book-m { from { background-position: 0 -60px; } to { background-position: -480px -60px; } }
+    @keyframes guide-read-m { from { background-position: 0 -120px; } to { background-position: -480px -120px; } }
     .guide-bubble { display: none; }
+    .guide { bottom: 1.25rem; right: 1.25rem; }
     .fd-workspace { width: 100vw; }
     .fd-toggle { right: 1rem; bottom: 6rem; top: auto; transform: none; }
+    .fd-toggle:hover { transform: scale(1.12); }
+}
+@media (max-width: 420px) {
+    .hero h1 { font-size: 1.7rem; }
+    .hero-desc { font-size: 0.92rem; }
+    .hero-character-wrap { width: 160px; height: 160px; }
+    .hero-character { width: 144px; height: 144px; background-size: 1152px 432px; }
+    .hero-character-glow { width: 160px; height: 160px; }
+    .hero-character.stand { animation: sprite-stand-xs 1.9s steps(8) infinite; }
+    .hero-character.book { animation: sprite-book-xs 1.35s steps(8) infinite; }
+    .hero-character.read { animation: sprite-read-xs 2.2s steps(8) infinite; }
+    @keyframes sprite-stand-xs { from { background-position: 0 0; } to { background-position: -1152px 0; } }
+    @keyframes sprite-book-xs { from { background-position: 0 -144px; } to { background-position: -1152px -144px; } }
+    @keyframes sprite-read-xs { from { background-position: 0 -288px; } to { background-position: -1152px -288px; } }
+    .section-title { font-size: 1.4rem; }
+    .prose { font-size: 0.95rem; }
+    .stat-strip { grid-template-columns: 1fr 1fr; gap: 1px; }
+    .stat-strip-val { font-size: 1.1rem; }
+    .hero-meta-item { font-size: 0.62rem; }
 }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
